@@ -2,9 +2,11 @@
   <div id="navigation">
     <div class="navigation_inner">
       <a class="logo_info" href="">{{ logo_info }}</a>
-      <a class="home 1" href="">{{ home_1 }}</a>
-      <a class="home 2" href="">{{ home_2 }}</a>
-      <a class="home 3" href="">{{ home_3 }}</a>
+      <div class="home_div">
+        <a class="home 1" href="">{{ home_1 }}</a>
+        <a class="home 2" href="">{{ home_2 }}</a>
+        <a class="home 3" href="">{{ home_3 }}</a>
+      </div>
     </div>
   </div>
 </template>
@@ -14,7 +16,7 @@ export default {
   name: 'Navigation',
   data () {
     return {
-      logo_info: '王春的个人网站',
+      logo_info: '李淑玲',
       home_1: '主页',
       home_2: '博客',
       home_3: '留言板'
@@ -32,31 +34,40 @@ export default {
 }
 
 #navigation {
-  background-image: url("../../assets/navigation/backImage.png");
+  background-color: #333333;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 100px;
+  height: 45px;
 }
 
 .navigation_inner {
   position: absolute;
-  top: 20px;
-  left: 25%;
+  left: 17%;
   right: 20%;
   font-family: 'Microsoft Himalaya';
+  height: 30px;
+  top: 5px;
 }
 
-.logo_info{
-  font-size: 40px;
+.logo_info {
+  float: left;
+  font-size: 26px;
+  width: 3.14286em;
 }
 
-.home{
-  font-size: 30px;
-  margin: 55px;
+.home_div {
+
 }
 
-a{
+.home {
+  float: right;
+  font-size: 20px;
+  margin-right: 100px;
+  margin-top: 3px;
+}
+
+a {
   text-decoration: none;
-  color: #000000;
+  color: #eaeaea;
 }
 </style>
